@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 local options = {
 	color_scheme = "Kanagawa (Gogh)",
 	font = wezterm.font("JetBrains Mono"),
-	font_size = 9,
+	font_size = 10,
 	hide_tab_bar_if_only_one_tab = true,
 	launch_menu = {
 		{
