@@ -15,7 +15,10 @@ local options = {
 		},
 		{ label = "Htop", args = { "htop" } },
 		{ label = "Python", args = { "python" } },
+		{ label = "LazyGit", args = { "LazyGit" } },
+		{ label = "Node", args = { "node" } },
 	},
+	keys = require("keys"),
 }
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
