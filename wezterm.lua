@@ -1,13 +1,14 @@
 local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
-
 -- Fonts and Colors
 local options = {
+  debug_key_events = true,
 	color_scheme = "Kanagawa (Gogh)",
 	font = wezterm.font("JetBrains Mono"),
 	font_size = 10,
 	hide_tab_bar_if_only_one_tab = true,
+  disable_default_key_bindings = true,
 	launch_menu = {
 		{
 			label = "Bash",
@@ -18,7 +19,7 @@ local options = {
 		{ label = "LazyGit", args = { "LazyGit" } },
 		{ label = "Node", args = { "node" } },
 	},
-	keys = require("keys"),
+	keys = require("keymaps"),
 }
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
