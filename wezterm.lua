@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 -- Fonts and Colors
 local options = {
-  debug_key_events = true,
+  -- debug_key_events = true,
 	color_scheme = "Kanagawa (Gogh)",
 	font = wezterm.font("JetBrains Mono"),
 	font_size = 10,

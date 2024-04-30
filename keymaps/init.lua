@@ -39,16 +39,17 @@ local keymaps = {
 		action = wezterm.action.SplitPane({
 			direction = "Down",
 			size = { Percent = 20 },
+			top_level = false,
 		}),
 	},
 }
 
 -- Tab
-for i = 1, 5 do
+for i = 1, 5, 1 do
 	-- CTRL+ALT + number to activate that tab
 	table.insert(keymaps, {
 		key = tostring(i),
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = wezterm.action.ActivateTab(i - 1),
 	})
 end
