@@ -10,7 +10,10 @@ local options = {
 	hide_tab_bar_if_only_one_tab = true,
 	disable_default_key_bindings = true,
 	launch_menu = {
-		{ label = "Pwsh 7", args = { "pwsh" } },
+		{
+			label = "WSL:Arch",
+			domain = { DomainName = "WSL:Arch" },
+		},
 		{
 			label = "Bash",
 			args = { "bash" },
@@ -25,6 +28,7 @@ local options = {
 }
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	table.insert(options.launch_menu, { label = "Pwsh 7", args = { "pwsh" }, domain = { DomainName = "local" } })
 	config.wsl_domains = {
 		{ name = "WSL:Arch", distribution = "Arch", default_cwd = "~" },
 	}

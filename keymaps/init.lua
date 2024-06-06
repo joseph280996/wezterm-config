@@ -1,29 +1,9 @@
 local wezterm = require("wezterm")
-local keymaps = {
-	-- Operations
-	{
-		key = "c",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.CopyTo("Clipboard"),
-	},
-	{
-		key = "v",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.PasteFrom("Clipboard"),
-	},
-	{ key = "F11", mods = "CTRL", action = wezterm.action.ToggleFullScreen },
 
-	-- Menu
-	{
-		key = "P",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.ActivateCommandPalette,
-	},
-	{
-		key = "L",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.ShowLauncher,
-	},
-}
+local keymaps = require("keymaps.linux")
+
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+  keymaps = require("keymaps.window")
+end
 
 return keymaps
