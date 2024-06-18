@@ -7,7 +7,7 @@ local options = {
 	color_scheme = "Kanagawa (Gogh)",
 	font = wezterm.font("JetBrains Mono"),
 	font_size = 9,
-	enable_tab_bar = false,
+	hide_tab_bar_if_only_one_tab = false,
 	disable_default_key_bindings = true,
 	launch_menu = {
 		{
@@ -28,7 +28,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	table.insert(options.launch_menu, { label = "Pwsh 7", args = { "pwsh" }, domain = { DomainName = "local" } })
 	options["default_prog"] = { "C:/Program Files/PowerShell/7/pwsh.exe" }
 	config.wsl_domains = {
-		{ name = "WSL:Arch", distribution = "Arch", default_cwd = "~" },
+		{ name = "WSL:Arch", distribution = "Arch", default_cwd = "~", default_prog = { "zellij", "-l", "welcome" } },
 	}
 end
 
