@@ -21,6 +21,7 @@ local keymaps = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.PasteFrom("Clipboard"),
 	},
+	{ key = "F11", mods = "CTRL", action = wezterm.action.ToggleFullScreen },
 
 	-- Movements
 	{ key = "h", mods = "CTRL|ALT|SHIFT", action = wezterm.action.ActivatePaneDirection("Left") },
