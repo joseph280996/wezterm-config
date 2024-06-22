@@ -36,7 +36,6 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config.wsl_domains = {
 		{ name = "WSL:Arch", distribution = "Arch", default_cwd = "~", default_prog = { "zellij", "-l", "welcome" } },
 	}
-	config.default_domain = "WSL:Arch"
 end
 
 for setting, value in pairs(options) do
