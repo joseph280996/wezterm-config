@@ -2,26 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 -- Fonts and Colors
-local options = {
-	-- debug_key_events = true,
-	color_scheme = "Kanagawa (Gogh)",
-	font = wezterm.font("JetBrains Mono"),
-	font_size = 7.5,
-	hide_tab_bar_if_only_one_tab = false,
-	disable_default_key_bindings = true,
-	launch_menu = {
-		{
-			label = "WSL:Arch",
-			domain = { DomainName = "WSL:Arch" },
-		},
-		{ label = "Htop", args = { "htop" } },
-		{ label = "Python", args = { "python" } },
-		{ label = "LazyGit", args = { "LazyGit" } },
-		{ label = "Node", args = { "node" } },
-	},
-	keys = require("keymaps"),
-	default_cwd = "~",
-}
+local options = require("config")
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	table.insert(options.launch_menu, { label = "Pwsh 7", args = { "pwsh" }, domain = { DomainName = "local" } })
@@ -30,6 +11,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 		args = { "bash" },
 		domain = { DomainName = "local" },
 	})
+  config.font_size = 7.5
 
 	config.default_prog = { "pwsh" }
 
