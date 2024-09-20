@@ -2,6 +2,7 @@ local wezterm = require("wezterm")
 
 local keymaps = {
 	-- Operations
+	{ key = "t", mods = "CTRL|SHIFT", action = wezterm.action.ShowLauncher },
 	{
 		key = "c",
 		mods = "CTRL|SHIFT",
@@ -25,6 +26,10 @@ local keymaps = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ShowLauncher,
 	},
+	{ key = "h", mods = "CTRL|ALT|SHIFT", action = wezterm.action.ActivatePaneDirection("Left") },
+	{ key = "j", mods = "CTRL|ALT|SHIFT", action = wezterm.action.ActivatePaneDirection("Down") },
+	{ key = "k", mods = "CTRL|ALT|SHIFT", action = wezterm.action.ActivatePaneDirection("Up") },
+	{ key = "l", mods = "CTRL|ALT|SHIFT", action = wezterm.action.ActivatePaneDirection("Right") },
 }
 
 -- Tab

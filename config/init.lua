@@ -7,10 +7,6 @@ local config = {
 	hide_tab_bar_if_only_one_tab = false,
 	disable_default_key_bindings = true,
 	launch_menu = {
-		{
-			label = "WSL:Arch",
-			domain = { DomainName = "WSL:Arch" },
-		},
 		{ label = "Python", args = { "python" } },
 		{ label = "Node", args = { "node" } },
 	},
