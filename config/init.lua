@@ -1,17 +1,18 @@
 local wezterm = require("wezterm")
-local config = {
-	-- debug_key_events = true,
-	color_scheme = "Kanagawa (Gogh)",
-	font = wezterm.font("JetBrains Mono"),
-	font_size = 9,
-	hide_tab_bar_if_only_one_tab = false,
-	disable_default_key_bindings = true,
-	launch_menu = {
-		{ label = "Python", args = { "python" } },
-		{ label = "Node", args = { "node" } },
-	},
-	keys = require("keymaps"),
-	default_cwd = "~",
-}
+local config = require('config.base')
+local utils = require('utils')
+
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+  utils.tbl_deep_extend(require('config.window'), config)
+end
+
+if wezterm.target_triple == "x86_64-unknown-linux-gnu" then
+  utils.tbl_deep_extend(require('config.linux'), config)
+end
+
+if wezterm.target_triple == "aarch64-apple-darwin" then
+  utils.tbl_deep_extend(require('config.mac'), config)
+end
+
 
 return config
