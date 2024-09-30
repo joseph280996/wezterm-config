@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 
 local keymaps = {
-  -- Pane
+	-- Pane
 	{ key = "x", mods = "LEADER", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
 	-- Operations
 	{ key = "x", mods = "LEADER|SHIFT", action = wezterm.action.CloseCurrentTab({ confirm = true }) },
@@ -36,6 +36,9 @@ local keymaps = {
 	{ key = "UpArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Up", 1 }) },
 	{ key = "RightArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Right", 1 }) },
 
+	{ key = "UpArrow", mods = "LEADER|SHIFT", action = wezterm.action.ScrollByLine(-1) },
+	{ key = "DownArrow", mods = "LEADER|SHIFT", action = wezterm.action.ScrollByLine(1) },
+
 	-- Splits
 	{
 		key = "|",
@@ -47,31 +50,31 @@ local keymaps = {
 		}),
 	},
 
-  -- Session
-  {
-    key = "s",
-    mods = "LEADER",
-    action = wezterm.action.SwitchToWorkspace {
-      name = "School",
-      cwd = "~/Code/School/"
-    }
-  },
-  {
-    key = "w",
-    mods = "LEADER",
-    action = wezterm.action.SwitchToWorkspace {
-      name = "Work",
-      cwd = "~/Work/"
-    }
-  },
-  {
-    key = "n",
-    mods = "LEADER",
-    action = wezterm.action.SwitchToWorkspace {
-      name = "Notes",
-      cwd = "F:/Notebook/Personal/"
-    }
-  }
+	-- Session
+	{
+		key = "s",
+		mods = "LEADER",
+		action = wezterm.action.SwitchToWorkspace({
+			name = "School",
+			cwd = "~/Code/School/",
+		}),
+	},
+	{
+		key = "w",
+		mods = "LEADER",
+		action = wezterm.action.SwitchToWorkspace({
+			name = "Work",
+			cwd = "~/Work/",
+		}),
+	},
+	{
+		key = "n",
+		mods = "LEADER",
+		action = wezterm.action.SwitchToWorkspace({
+			name = "Notes",
+			cwd = "F:/Notebook/Personal/",
+		}),
+	},
 }
 
 -- Tab
