@@ -36,8 +36,8 @@ local keymaps = {
 	{ key = "UpArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Up", 1 }) },
 	{ key = "RightArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Right", 1 }) },
 
-	{ key = "UpArrow", mods = "LEADER|SHIFT", action = wezterm.action.ScrollByLine(-1) },
-	{ key = "DownArrow", mods = "LEADER|SHIFT", action = wezterm.action.ScrollByLine(1) },
+	{ key = "UpArrow", mods = "SHIFT", action = wezterm.action.ScrollByLine(-1) },
+	{ key = "DownArrow", mods = "SHIFT", action = wezterm.action.ScrollByLine(1) },
 
 	-- Splits
 	{
