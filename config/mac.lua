@@ -1,4 +1,5 @@
 return {
-	font_size = 9,
+  enable_tab_bar = false,
+	font_size = 12,
 	keys = require("keymaps.mac"),
 }
