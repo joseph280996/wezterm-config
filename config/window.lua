@@ -15,7 +15,7 @@ return {
 	font_size = 7.5,
 	default_prog = { "pwsh" },
 	wsl_domains = {
-		{ name = "WSL:Arch", distribution = "Arch", default_cwd = "~", default_prog = { "zellij", "-l", "welcome" } },
+		{ name = "WSL:Arch", distribution = "Arch", default_cwd = "~" },
 	},
 	keys = require("keymaps.window"),
 	default_workspace = "default",
