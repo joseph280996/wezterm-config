@@ -1,8 +1,8 @@
 return {
 	launch_menu = {
 		{
-			label = "WSL:Arch",
-			domain = { DomainName = "WSL:Arch" },
+			label = "Default Arch WSL",
+			domain = { DomainName = "WSL-Arch" },
 		},
 		{ label = "Pwsh 7", args = { "pwsh" }, domain = { DomainName = "local" } },
 		{
@@ -14,7 +14,7 @@ return {
 	font_size = 7.5,
 	default_prog = { "pwsh" },
 	wsl_domains = {
-		{ name = "WSL:Arch", distribution = "Arch", default_cwd = "~" },
+		{ name = "WSL-Arch", distribution = "Arch", default_cwd = "~" },
 	},
 	keys = require("keymaps.window"),
 	default_workspace = "default",

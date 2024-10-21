@@ -1,18 +1,17 @@
 local wezterm = require("wezterm")
-local config = require('config.base')
-local utils = require('utils')
+local config = require("config.base")
+local utils = require("utils")
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-  utils.tbl_deep_extend(require('config.window'), config)
+	config = utils.tbl_deep_extend(config, require("config.window"))
 end
 
 if wezterm.target_triple == "x86_64-unknown-linux-gnu" then
-  utils.tbl_deep_extend(require('config.linux'), config)
+	config = utils.tbl_deep_extend(config, require("config.linux"))
 end
 
 if wezterm.target_triple == "aarch64-apple-darwin" then
-  utils.tbl_deep_extend(require('config.mac'), config)
+	config = utils.tbl_deep_extend(config, require("config.mac"))
 end
-
 
 return config
