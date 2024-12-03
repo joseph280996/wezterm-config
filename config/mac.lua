@@ -1,5 +1,7 @@
+local utils = require('utils')
+
 return {
-  enable_tab_bar = false,
 	font_size = 12,
-	keys = require("keymaps.mac"),
+	keys = utils.tbl_extend(require("keymaps.base"), require("keymaps.mac")),
+	hide_tab_bar_if_only_one_tab = false,
 }
