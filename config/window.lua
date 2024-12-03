@@ -12,12 +12,12 @@ return {
 			domain = { DomainName = "local" },
 		},
 	},
+	default_prog = { "C:/Program Files/Git/bin/bash" },
 	font_size = 7.5,
-	default_prog = { "pwsh" },
 	wsl_domains = {
 		{ name = "WSL-Arch", distribution = "Arch", default_cwd = "~" },
 	},
 	keys = require("keymaps.window"),
 	default_workspace = "default",
-	leader = { key = "\\", mods = "CTRL", timeout_milliseconds = 1000 },
+	leader = { key = "?", mods = "CTRL|SHIFT", timeout_milliseconds = 1000 },
 }

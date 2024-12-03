@@ -1,4 +1,6 @@
 local wezterm = require("wezterm")
+local base_km = require('keymaps.base')
+local utils = require('utils')
 
 local keymaps = {
 	-- Pane
@@ -60,6 +62,14 @@ local keymaps = {
 		}),
 	},
 	{
+		key = "c",
+		mods = "LEADER",
+		action = wezterm.action.SwitchToWorkspace({
+			name = "Config",
+			cwd = "~/AppData/Local/nvim/",
+		}),
+	},
+	{
 		key = "w",
 		mods = "LEADER",
 		action = wezterm.action.SwitchToWorkspace({
@@ -87,4 +97,4 @@ for i = 1, 5, 1 do
 	})
 end
 
-return keymaps
+return utils.list_extend(base_km, keymaps)
