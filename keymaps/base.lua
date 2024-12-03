@@ -18,7 +18,7 @@ local base = {
 
 	{ key = "x", mods = "LEADER", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
 	{ key = "x", mods = "LEADER|SHIFT", action = wezterm.action.CloseCurrentTab({ confirm = true }) },
-	{ key = "t", mods = "CTRL|SHIFT", action = wezterm.action.ShowLauncher },
+	{ key = "T", mods = "CTRL|SHIFT", action = wezterm.action.ShowLauncher },
 	{
 		key = "P",
 		mods = "CTRL|SHIFT",

@@ -1,4 +1,7 @@
 local utils = require('utils')
+local km = require('keymaps.base')
+utils.tbl_extend(require('keymaps.base'), require("keymaps.window"))
+
 return {
 	hide_tab_bar_if_only_one_tab = false,
 	launch_menu = {
@@ -18,7 +21,7 @@ return {
 	wsl_domains = {
 		{ name = "WSL-Arch", distribution = "Arch", default_cwd = "~" },
 	},
-	keys = utils.tbl_extend(require('keymaps.base'), require("keymaps.window")),
+	keys = km,
 	default_workspace = "default",
 	leader = { key = "?", mods = "CTRL|SHIFT", timeout_milliseconds = 1000 },
 }
