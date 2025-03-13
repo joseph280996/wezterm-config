@@ -8,4 +8,5 @@ return {
 		{ label = "Node", args = { "node" } },
 	},
 	default_cwd = "~",
+	leader = { key = "\\", mods = "CTRL", timeout_milliseconds = 1000 },
 }
