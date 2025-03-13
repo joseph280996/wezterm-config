@@ -35,6 +35,16 @@ local base = {
 
 	{ key = "UpArrow", mods = "SHIFT", action = wezterm.action.ScrollByLine(-1) },
 	{ key = "DownArrow", mods = "SHIFT", action = wezterm.action.ScrollByLine(1) },
+	{
+		key = "c",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.CopyTo("Clipboard"),
+	},
+	{
+		key = "v",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.PasteFrom("Clipboard"),
+	},
 }
 
 -- Tab

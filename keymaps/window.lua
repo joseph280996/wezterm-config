@@ -6,16 +6,6 @@ local keymaps = {
 	-- Operations
 	{ key = "Tab", mods = "CTRL|SHIFT", action = wezterm.action.ActivateTabRelative(1) },
 	{ key = "Tab", mods = "CTRL|ALT|SHIFT", action = wezterm.action.ActivateTabRelative(-1) },
-	{
-		key = "c",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.CopyTo("Clipboard"),
-	},
-	{
-		key = "v",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.PasteFrom("Clipboard"),
-	},
 	{ key = "F11", mods = "CTRL", action = wezterm.action.ToggleFullScreen },
 
 	-- Splits
