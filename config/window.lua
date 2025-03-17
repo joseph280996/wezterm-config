@@ -1,14 +1,12 @@
-local utils = require('utils')
-local km = require('keymaps.base')
-utils.tbl_extend(require('keymaps.base'), require("keymaps.window"))
+local utils = require("utils.tables")
+local km = require("keymaps.base")
+utils.tbl_extend(require("keymaps.base"), require("keymaps.window"))
 
 return {
 	hide_tab_bar_if_only_one_tab = false,
 	launch_menu = {
 		{
 			label = "Bash (local)",
-		{
-			label = "Bash",
 			args = { "bash" },
 			domain = { DomainName = "local" },
 		},

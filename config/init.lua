@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 local config = require("config.base")
-local utils = require("utils")
+local utils = require("utils.tables")
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config = utils.tbl_deep_extend(config, require("config.window"))

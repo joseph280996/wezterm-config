@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 local base_km = require('keymaps.base')
-local utils = require('utils')
+local utils = require('utils.tables')
 
 local keymaps = {
 	-- Operations
