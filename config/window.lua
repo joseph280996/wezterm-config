@@ -20,7 +20,7 @@ return {
     },
   },
   default_prog = { "C:/Program Files/Git/bin/bash" },
-  font_size = 7.5,
+  font_size = 9,
   wsl_domains = {
     { name = "WSL-Arch", distribution = "Arch", default_cwd = "~" },
   },
