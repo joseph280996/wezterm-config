@@ -1,8 +1,6 @@
-local wezterm = require('wezterm')
 return {
 	-- debug_key_events = true,
 	color_scheme = "Kanagawa (Gogh)",
-	font = wezterm.font("JetBrainsMono Nerd Font Mono"),
 	launch_menu = {
 		{ label = "Python", args = { "python" } },
 		{ label = "Node", args = { "node" } },
