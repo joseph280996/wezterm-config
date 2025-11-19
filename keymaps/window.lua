@@ -52,6 +52,27 @@ local keymaps = {
 			cwd = "F:/Notebook/Personal/",
 		}),
 	},
+  -- Disable default assignments
+  {
+    key = '-',
+    mods = 'CTRL',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
+  {
+    key = '+',
+    mods = 'CTRL',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
+  {
+    key = '-',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
+  {
+    key = '+',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
 }
 
 return utils.list_extend(base_km, keymaps)
