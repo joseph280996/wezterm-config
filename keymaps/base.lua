@@ -14,33 +14,8 @@ local base = {
   { key = "k",          mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Up") },
   { key = "l",          mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Right") },
   { key = "s",          mods = "LEADER", action = wezterm.action.SplitVertical({ domain = 'CurrentPaneDomain' }) },
-  { key = "LeftArrow",  mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Left", 1 }) },
-  { key = "DownArrow",  mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Down", 1 }) },
-  { key = "UpArrow",    mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Up", 1 }) },
-  { key = "RightArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Right", 1 }) },
-
   { key = "UpArrow",    mods = "SHIFT",  action = wezterm.action.ScrollByLine(-1) },
   { key = "DownArrow",  mods = "SHIFT",  action = wezterm.action.ScrollByLine(1) },
-  {
-    key = "c",
-    mods = "CTRL|SHIFT",
-    action = wezterm.action.CopyTo("Clipboard"),
-  },
-  {
-    key = "v",
-    mods = "CTRL|SHIFT",
-    action = wezterm.action.PasteFrom("Clipboard"),
-  },
 }
-
--- Tab
-for i = 1, 5, 1 do
-  -- CTRL+ALT + number to activate that tab
-  table.insert(base, {
-    key = tostring(i),
-    mods = "CTRL|ALT",
-    action = wezterm.action.ActivateTab(i - 1),
-  })
-end
 
 return base
