@@ -5,6 +5,6 @@ return {
 		{ label = "Python", args = { "python" } },
 		{ label = "Node", args = { "node" } },
 	},
-	default_cwd = "~",
+	default_cwd = "$HOME",
 	leader = { key = "?", mods = "CTRL|SHIFT", timeout_milliseconds = 1000 },
 }
