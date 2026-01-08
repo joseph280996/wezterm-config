@@ -11,23 +11,23 @@ M.tbl_extend = function(source, target)
 end
 
 M.list_extend = function(source, target)
-  local merged_list = {}
-  for index = 1, #target do
-    table.insert(merged_list, target[index])
-  end
+	local merged_list = {}
+	for index = 1, #target do
+		table.insert(merged_list, target[index])
+	end
 
 	for index = 1, #source do
 		table.insert(merged_list, source[index])
 	end
 
-  return merged_list
+	return merged_list
 end
 
 M.tbl_deep_extend = function(source, target)
-  local merge_result = {}
-  for key, val in pairs(target) do
-    merge_result[key] = val
-  end
+	local merge_result = {}
+	for key, val in pairs(source) do
+		merge_result[key] = val
+	end
 
 	for key, val in pairs(source) do
 		if merge_result[key] == nil then
@@ -41,7 +41,7 @@ M.tbl_deep_extend = function(source, target)
 		end
 	end
 
-  return merge_result
+	return merge_result
 end
 
 return M
