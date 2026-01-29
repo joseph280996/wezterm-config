@@ -5,8 +5,9 @@ local is_list = function(tbl)
 end
 
 M.tbl_extend = function(source, target)
-	for key, value in pairs(source) do
-		target[key] = value
+	local merged_list = {}
+	for index = 1, #target do
+		table.insert(merged_list, target[index])
 	end
 end
 
@@ -25,7 +26,7 @@ end
 
 M.tbl_deep_extend = function(source, target)
 	local merge_result = {}
-	for key, val in pairs(source) do
+	for key, val in pairs(target) do
 		merge_result[key] = val
 	end
 
